@@ -1,8 +1,17 @@
 #! /bin/bash 
+
+if [ -z "$1" ]; then
+    INDEX=0
+    BACK=1
+else
+	INDEX=$1
+	BACK=$(($1+1))
+fi
+
 USER=$(whoami)
 PID=$(pgrep -u $USER gnome-session)
 export DBUS_SESSION_BUS_ADDRESS=$(grep -z DBUS_SESSION_BUS_ADDRESS /proc/$PID/environ|cut -d= -f2-)
 
-PIC=$(curl "http://dagensdatalog.dk/api" | jq .[0].image | sed -e 's/^"//' -e 's/"$//')
+PIC=$(curl "http://dagensdatalog.dk/api/$BACK" | jq .[$INDEX].image | sed -e 's/^"//' -e 's/"$//')
 curl "http://dagensdatalog.dk/picture/$PIC" > "/home/$USER/.wallpaper.jpg"
 gsettings set org.gnome.desktop.background picture-uri "file:///home/$USER/.wallpaper.jpg"
