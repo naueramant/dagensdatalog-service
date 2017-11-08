@@ -9,4 +9,4 @@ OnUnitActiveSec=1h
 Unit=dagensdatalog.service
 
 [Install]
-WantedBy=dagensdatalog.service
+WantedBy=default.target
