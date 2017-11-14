@@ -13,6 +13,4 @@ new_path="\/home\/$(whoami)\/.local\/bin\/dagensdatalog"
 
 sed "s/${original_path}/${new_path}/g" $HOME/.local/systemd/user/dagensdatalog.service > $HOME/.local/systemd/user/dagensdatalog.service
 
-systemctl --user enable dagensdatalog.timer
-
-systemctl --user start dagensdatalog.service
+systemctl --user enable --now dagensdatalog.timer
