@@ -14,7 +14,7 @@ source=('.install'
         'dagensdatalog.timer')
 noextract=()
 install='.install'
-md5sums=('bcaae4cc9a44dd61563308fbcf6a5fb9'
+md5sums=('0b3557195ed2a7e9aaaf58fd758fdcdf'
          '00c8ace1c77aa4155be87c874321dfc4'
          '21c2205fe57a5fe06606ef096fce848e'
          '6025809739e7001ccf01bb5bec13e9c7'
