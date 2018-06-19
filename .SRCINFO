@@ -1,13 +1,14 @@
 pkgbase = dagensdatalog-service
 	pkgdesc = A Systemd service and timer for automatically changing the users wallpaper to todays wallpaper from Dagensdatalog.dk
 	pkgver = 1.0
-	pkgrel = 1
+	pkgrel = 2
 	url = https://github.com/naueramant/dagensdatalog-service
 	install = .install
 	arch = any
 	license = MIT
 	depends = systemd
 	depends = gnome-shell
+	depends = jq
 	source = .install
 	source = LICENSE
 	source = dagensdatalog

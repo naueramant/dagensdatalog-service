@@ -1,12 +1,12 @@
 # Maintainer: Ulrik Boll Djurtoft <ullebe1 at gmail dot com>, Jonas Tranberg Sørensen <>
 pkgname=dagensdatalog-service
 pkgver=1.0
-pkgrel=1
+pkgrel=2
 pkgdesc="A Systemd service and timer for automatically changing the users wallpaper to todays wallpaper from Dagensdatalog.dk"
 arch=('any')
 url="https://github.com/naueramant/dagensdatalog-service"
 license=('MIT')
-depends=('systemd' 'gnome-shell')
+depends=('systemd' 'gnome-shell' 'jq')
 source=('.install'
         'LICENSE'
         'dagensdatalog'
